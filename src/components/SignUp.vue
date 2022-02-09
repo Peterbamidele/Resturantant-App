@@ -20,6 +20,9 @@ export default {
 <style scoped>
 .sign h1{
   color: #2c3e50;
+  font-size: large;
+  font-weight: bolder;
+  font-family: cursive;
 }
 .logo{
   width: 100px;
