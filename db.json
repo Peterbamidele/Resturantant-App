@@ -1,16 +1,34 @@
 {
-  "user": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
+  "users": [
     {
       "nmme": "peter333",
       "email": "pete3333rbamidele@gmail",
       "password": "afvvfvsjdkeoee",
+      "id": 1
+    },
+    {
+      "name": "peter",
+      "email": "peterbamidele98@gmail.com",
+      "password": "123456789uytrew",
+      "id": 2
+    },
+    {
+      "name": "lare",
+      "email": "larea@test.com",
+      "password": "123456trewq",
       "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "peueu",
+      "email": "pwojsjs@test.com",
+      "password": "oiuytgjkk",
+      "id": 5
     }
   ]
 }
