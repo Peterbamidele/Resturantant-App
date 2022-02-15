@@ -7,6 +7,9 @@
       <input type="text" v-model="email" placeholder="Email" Unique  required />
       <input type="text" v-model="password"  placeholder="password" required mdi />
       <button v-on:click="signUp"> Sign Up</button>
+      <p class="sig">
+        <router-link to="/login">Login</router-link>
+      </p>
     </div>
   </div>
 </template>
@@ -32,12 +35,20 @@ export default {
       });
       console.warn(result);
       if (result.status === 201){
-        alert("signUp done")
+        // alert("signUp done")
+        localStorage.setItem("user-info",JSON.stringify(result.data))
+        await this.$router.push({name: 'Home'})
       }
-      localStorage.setItem("user-info",JSON.stringify(result.data))
-      this.$router.push({name: 'Home'})
+
     }
+  },
+  mounted() {
+   let users = localStorage.getItem( 'users-info' );
+   if (users){
+     this.$router.push({name:'Home'})
+   }
   }
+
 }
 </script>
 
@@ -51,6 +62,9 @@ export default {
 }
 .logo{
   width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .register input{
   width: 300px;
@@ -70,7 +84,15 @@ export default {
   background:skyblue;
   color: aliceblue;
   cursor: pointer;
-
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sig{
+  text-align: center;
+  font-size: medium;
+  color: #2c3e50;
+  cursor: pointer;
 }
 
 </style>
